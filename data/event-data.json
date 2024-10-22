@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Lorem ipsum",
+        "date": "2003-10-05",
+        "location": "Lorem ipsum Lorem ipsum",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quo.",
+        "creationDate": "2003-10-01 08:20:30",
+        "upcoming": true,
+        "completed": false
+    },
+    {
+        "name": " Lorem ipsum dolor sit amet consectetur adipisicing.",
+        "date": "2002-11-02",
+        "location": "Lorem ipsum Lorem ipsum Lorem",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates magnam voluptate cumque nisi quod neque.",
+        "creationDate": "2002-11-02 14:30:00",
+        "upcoming": false,
+        "completed": true
+    },
+    {
+        "name": "Lorem ipsum ipsum",
+        "date": "2007-08-15",
+        "location": "Lorem ipsum Lorem ipsum lorem",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quo. Lorem que",
+        "creationDate": "2007-08-01 10:30:10",
+        "upcoming": true,
+        "completed": false
+    },
+    {
+        "name": " Lorem ipsum dolor sit amet consectetur adipisicing.",
+        "date": "2000-02-12",
+        "location": "Lorem ipsum Lorem ipsum Lorem lorem lorem ipsum",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quo. lorem lorem lorem",
+        "creationDate": "2000-02-02 04:30:00",
+        "upcoming": false,
+        "completed": true
+    }
+]

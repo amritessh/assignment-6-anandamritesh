@@ -1,0 +1,125 @@
+
+body {
+    font-family:$page_font;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0; 
+    
+
+    #create-event-button{
+        background-color: $create_color2;
+        border: solid;
+        padding: 20px;
+        cursor:pointer;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-left: 520px;
+
+}
+}
+
+header {
+    background-color: $header_color1;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        margin: 2px;
+        text-align: center;
+        // font-family: ;
+    }
+
+}
+
+main {
+    padding: 50px;
+
+}
+
+
+
+.event-card {
+    background-color: rgb(234, 223, 223);
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    padding: 20px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .event-description {
+        margin-bottom: 15px;
+    }
+
+    .event-details {
+        display: none;
+    }
+
+    &.expanded .event-details {
+        display: block;
+    }
+
+    &.upcoming {
+        border-left: 5px solid $header_color1;
+    }
+
+    &.completed {
+        border-left: 5px solid $create_color2;
+    }
+}
+
+// Modal styles
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal-content {
+        background-color: white;
+        margin: 10% auto;
+        padding: 2rem;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 600px;
+
+        .close {
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input, textarea {
+                margin-bottom: 1rem;
+                padding: 0.5rem;
+                font-size: 1rem;
+            }
+
+            button {
+                background-color: $header_color1;
+                border: none;
+                color: white;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                font-size: 1rem;
+            }
+        }
+    }
+}

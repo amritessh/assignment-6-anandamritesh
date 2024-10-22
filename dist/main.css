@@ -1,0 +1,104 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #b0d9e9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+body #create-event-button {
+  background-color: #80c391;
+  border: solid;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 520px;
+}
+
+header {
+  background-color: #6464e8;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 2px;
+  text-align: center;
+}
+
+main {
+  padding: 50px;
+}
+
+.event-card {
+  background-color: rgb(234, 223, 223);
+  margin-bottom: 25px;
+  padding: 20px;
+}
+.event-card h2 {
+  margin-top: 0;
+}
+.event-card .event-description {
+  margin-bottom: 15px;
+}
+.event-card .event-details {
+  display: none;
+}
+.event-card.expanded .event-details {
+  display: block;
+}
+.event-card.upcoming {
+  border-left: 5px solid #6464e8;
+}
+.event-card.completed {
+  border-left: 5px solid #80c391;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+}
+.modal .modal-content .close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal .modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+.modal .modal-content form input, .modal .modal-content form textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.modal .modal-content form button {
+  background-color: #6464e8;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */

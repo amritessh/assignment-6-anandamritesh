@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY EVENT PLANNER</title>
+    <link rel="stylesheet" href="dist/main.css">
+</head>
+<body>
+    <header>
+        <!-- header for the event planenr -->
+        <h1>MY EVENT PLANNER</h1>
+        
+    </header>
+    
+    <main>
+        <!-- Event creation button -->
+        <button id="create-event-button">CREATE NEW EVENT</button>
+        <div id="eventList"></div>
+    </main>
+    
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="eventForm">
+                <input type="text" id="eventName" placeholder="Event Name" required>
+                <input type="date" id="eventDate" required>
+                <input type="text" id="eventLocation" placeholder="Location" required>
+                <textarea id="eventDescription" placeholder="Description" required></textarea>
+                <button type="submit">SAVE</button>
+            </form>
+            <!-- <button id="createEventBtn">Create Event</button> -->
+        </div>
+        
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
