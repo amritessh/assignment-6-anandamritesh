@@ -25,7 +25,7 @@ class EventPlanner {
 
         this.init();
     }
-
+//initialise event listeners and fetch events
     init() {
         this.fetchEvents();
         this.createEventBtn.addEventListener('click', () => this.showModal());
@@ -33,6 +33,8 @@ class EventPlanner {
         this.eventForm.addEventListener('submit', (e) => this.handleFormSubmit(e));
     }
 
+    
+    // fetch events using the XMLHTTPRequest from the JSON file
     fetchEvents() {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'data/event-data.json', true);
@@ -46,6 +48,7 @@ class EventPlanner {
         xhr.send();
     }
 
+// UI rendering as per the requirement
     renderEvents() {
         this.eventList.innerHTML = '';
         this.events.forEach((event, index) => {
@@ -59,6 +62,8 @@ class EventPlanner {
 
             const truncatedDescription = this.truncateDescription(event.description);
 
+           
+           //HTML Structure for the event class
             eventCard.innerHTML = `
                 <h2>${event.name}</h2>
                 <p class="event-description">${truncatedDescription}</p>
@@ -84,6 +89,7 @@ class EventPlanner {
             const completedCheckbox = eventCard.querySelector('.completed-checkbox');
             const editButton = eventCard.querySelector('.edit-button');
 
+            // event listeners
             eventCard.addEventListener('click', (e) => {
                 if (!e.target.matches('input[type="checkbox"], button')) {
                     this.toggleEventDetails(detailsDiv);
@@ -98,6 +104,7 @@ class EventPlanner {
         });
     }
 
+    //truncating description logic to 10 words as per the assignment guidelines
     truncateDescription(description) {
         const words = description.split(' ');
         if (words.length > 10) {
@@ -106,10 +113,12 @@ class EventPlanner {
         return description;
     }
 
+    // toggling event detail visibility
     toggleEventDetails(detailsDiv) {
         detailsDiv.style.display = detailsDiv.style.display === 'none' ? 'block' : 'none';
     }
 
+    // toggling event status as in the assignment requirements
     toggleEventStatus(index, status) {
         if (status === 'upcoming') {
             this.events[index].upcoming = !this.events[index].upcoming;
@@ -125,6 +134,7 @@ class EventPlanner {
         this.renderEvents();
     }
 
+    // editing existing event
     editEvent(index) {
         if (index >= 0 && index < this.events.length) {
             const event = this.events[index];
@@ -138,6 +148,8 @@ class EventPlanner {
         }
     }
 
+
+    
     showModal(editing = false, event = null) {
         this.eventModal.style.display = 'block';
         this.isEditing = editing;
@@ -156,7 +168,7 @@ class EventPlanner {
         }
     }
 
- 
+    // handling form submission
     handleFormSubmit(e) {
         e.preventDefault();
         const name = document.getElementById('eventName').value;
@@ -194,4 +206,5 @@ class EventPlanner {
     }
 }
 
+// initialising the event planner
 const eventPlanner = new EventPlanner();
